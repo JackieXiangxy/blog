@@ -1,7 +1,5 @@
 package com.ust.myapp.controller;
 
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
@@ -90,12 +88,12 @@ public class ArticleController {
 	@RequestMapping("/saveupdate")
 	public String saveupdate(Model model, HttpServletRequest request) {
 		Integer artId = Integer.parseInt(request.getParameter("artId"));
-		String title = (String) request.getParameter("title");
+		String title =  request.getParameter("title");
 		User user = (User) request.getSession().getAttribute("user");
 		SysCategory sCategory = scService.getById(Integer.parseInt(request.getParameter("sys_category")));
 		Category category = csService.getById(Integer.parseInt(request.getParameter("category")));
-		String content = (String) request.getParameter("content");
-		String summary = (String) request.getParameter("summary");
+		String content =  request.getParameter("content");
+		String summary =  request.getParameter("summary");
 		ArticleWithBLOBs aWithBLOBs =artService.selectByPrimaryKey(artId);
 		aWithBLOBs.setTitle(title);
 		aWithBLOBs.setSysCategory(sCategory);
@@ -165,12 +163,12 @@ public class ArticleController {
 	 */
 	@RequestMapping("/save")
 	public String savaArticle(HttpServletRequest request) {
-		String title = (String) request.getParameter("title");
+		String title =  request.getParameter("title");
 		User user = (User) request.getSession().getAttribute("user");
 		SysCategory sCategory = scService.getById(Integer.parseInt(request.getParameter("sysCategory")));
 		Category category = csService.getById(Integer.parseInt(request.getParameter("category")));
-		String content = (String) request.getParameter("content");
-		String summary = (String) request.getParameter("summary");
+		String content =  request.getParameter("content");
+		String summary =  request.getParameter("summary");
 		ArticleWithBLOBs aWithBLOBs = new ArticleWithBLOBs();
 		aWithBLOBs.setId(null);
 		aWithBLOBs.setTitle(title);

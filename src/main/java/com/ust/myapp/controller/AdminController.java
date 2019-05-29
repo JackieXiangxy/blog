@@ -283,8 +283,6 @@ public class AdminController {
 	/**
 	 * 跳转添加系统分类
 	 * @author wanggang
-	 * @param model
-	 * @param request
 	 * @return
 	 */
 	@RequestMapping("/toaddCategory")

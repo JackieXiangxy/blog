@@ -50,7 +50,7 @@
 				<fieldset>
 
 					<form name="login_form" id="login_form" role="form" class="form-horizontal" action="<%=basePath %>user/login"
-						method="POST" ">
+						method="POST">
 						<fieldset>
 							<div id="legend">
 								<legend class="caption">登录</legend>
@@ -84,10 +84,14 @@
 							</div>
 						</fieldset>
 					</form>
+				</fieldset>
+				</div>
 			</div>
+
 		</div>
 		<div class="row col-md-4"></div>
 	</div>
+</body>
 
 	<jsp:include page="../../ui/frame/Footer.jsp" flush="true" />
 
